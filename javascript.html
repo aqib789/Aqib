@@ -1,0 +1,52 @@
+<head>
+	<title>javascript</title>
+	<script type="text/javascript">
+		function test()
+		{
+			if (document.getElementById("text").value=="")
+				{
+					document.getElementById("name").innerHTML="This field is manditory";
+				}
+			else if(document.getElementById("text").value.length <= 7 )
+			{
+				document.getElementById("name").innerHTML="minimum 8 charector is manditory";
+			}
+			else if(/^[a-zA-Z]+$/.test(document.getElementById("text").value)==false)
+			{
+				document.getElementById("name").innerHTML="Invalid";
+			}
+			else
+			{
+				document.getElementById("name").innerHTML="";
+			}
+
+		}
+		function test1()
+		{
+			if(document.getElementById("text1").value =="")
+			{
+				document.getElementById("name1").innerHTML="This field is manditory";
+				
+			/*	document.getElementById("name1").innerHTML="This field is manditory";*/
+			}
+			else if(/^[a-zA-Z]+$/.test(document.getElementById("text1").value)==false)
+			  {
+			  	document.getElementById("name1").innerHTML="Invalid";
+			  }
+			  else
+			{
+				document.getElementById("name1").innerHTML="";
+			}
+
+		}
+
+
+
+	</script>
+</head>
+<body>
+	<input type="text" placeholder="First name" id="text"><button onclick="test()">Click</button>
+	<div id="name"></div>
+	<input type="text" placeholder="Name" id="text1"><button onclick="test1()">Click</button>
+	<div id="name1"></div>
+</body>
