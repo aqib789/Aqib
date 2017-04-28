@@ -1,0 +1,54 @@
+
+<!-- THREE STEPS TO INSTALL NUMBER COUNTDOWN:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the onLoad event handler into the BODY tag
+  3.  Put the last coding into the BODY of your HTML document  -->
+
+<!-- STEP ONE: Paste this code into the HEAD of your HTML document  -->
+
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://www.javascriptsource.com -->
+<!-- Ben (BassClar89@aol.com) -->
+
+<!-- Begin
+<!--
+var n = prompt("Enter number");
+var g_iCount = new Number();
+
+// CHANGE THE COUNTDOWN NUMBER HERE - ADD ONE TO IT //
+var g_iCount = n;
+
+function startCountdown(){
+       if((g_iCount - 1) >= 0){
+               g_iCount = g_iCount - 1;
+               numberCountdown.innerText = '00:00.0' + g_iCount;
+               setTimeout('startCountdown()',1000);
+       }
+       else
+       {
+       	alert("Time expired");
+       }
+}
+//  End -->
+</script>
+
+</HEAD>
+
+<!-- STEP TWO: Insert the onLoad event handler into your BODY tag  -->
+
+<BODY onLoad="startCountdown()">
+
+<!-- STEP THREE: Copy this code into the BODY of your HTML document  -->
+
+<font face="Digital Readout Upright" color="blue" size="7">
+<div align="center" id="numberCountdown"></div>
+</font>
+
+
+
+<!-- Script Size:  1.33 KB -->
